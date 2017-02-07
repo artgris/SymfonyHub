@@ -1,0 +1,50 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+{% import _self as self %}
+
+{% block sub_content %}
+    <h3>Basic</h3>
+    <div class="row">
+        {{ self.figure(image(imageLena), 'image') }}
+        {{ self.figure(image(imageLena).resize(200,200), 'image.resize(200,200)') }}
+        {{ self.figure(image(imageLena).resize(200,200).negate, 'image.resize(200,200).negatif') }}
+        {{ self.figure(image(imageLena).resize('10%'), "image.resize('10%')") }}
+    </div>
+    <h3>Using Image API</h3>
+    <p>
+        <code>image.width</code> {{ image(imageLena).width }}px <br/>
+        <code>image.height</code> {{ image(imageLena).height }}px <br/>
+    </p>
+    <h3>Advanced</h3>
+    <div class="row">
+        {{ self.figure(image(imageLena).scaleResize(200,100,'fe0000'), "image.scaleResize(200,100,'fe0000')") }}
+        {{ self.figure(image(imageLena).scaleResize(100,200,'fe0000'), "image.scaleResize(100,200,'fe0000')") }}
+        {{ self.figure(image(imageLena).forceResize(300,200), "image.forceResize(300,200)") }}
+        {{ self.figure(image(imageLena).cropResize(200,100), "image.cropResize(200,100)") }}
+        {{ self.figure(image(imageLena).zoomCrop(200,100), "image.zoomCrop(200,100)") }}
+        {{ self.figure(image(imageLena).zoomCrop(200,100, '000000','right', 'bottom'), "image.zoomCrop(200,100, '000000','right', 'bottom')") }}
+        {{ self.figure(image(imageLena).crop(250,250,50,50), "image.crop(250,250,50,50)") }}
+        {{ self.figure(image(imageLena).resize(200,200).contrast(50), "image.resize(200,200).contrast(50)") }}
+        {{ self.figure(image(imageLena).resize(200,200).grayscale(), "image.resize(200,200).grayscale()") }}
+        {{ self.figure(image(imageLena).resize(200,200).emboss(), "image.resize(200,200).emboss()") }}
+        {{ self.figure(image(imageLena).resize(200,200).smooth(1), "image.resize(200,200).smooth(1)") }}
+        {{ self.figure(image(imageLena).resize(200,200).sharp(), "image.resize(200,200).sharp()") }}
+        {{ self.figure(image(imageLena).resize(200,200).edge(), "image.resize(200,200).edge()") }}
+        {{ self.figure(image(imageLena).resize(200,200).colorize(10,10,10), "image.resize(200,200).colorize(10, 10, 10)") }}
+        {{ self.figure(image(imageLena).resize(200,200).sepia(), "image.resize(200,200).sepia()") }}
+        {{ self.figure(image(imageLena).resize(200,200).jpeg(), "image.resize(200,200).jpeg()") }}
+        {{ self.figure(image(imageLena).resize(200,200).jpeg(1), "image.resize(200,200).jpeg(1)") }}
+        {{ self.figure(image(imageLena).resize(200,200).gif(), "image.resize(200,200).gif()") }}
+        {{ self.figure(image(imageLena).resize(200,200).png(), "image.resize(200,200).png()") }}
+        {{ self.figure(image(imageLena).resize(200,200).setPrettyName('lenaPrettyName'), "image.resize(200,200).setPrettyName('lenaPrettyName')") }}
+    </div>
+
+{% endblock %}
+
+{% macro figure(image, text) %}
+    <div class="col-md-6">
+        <figure class="figure">
+            <img class="figure-img img-fluid" src="{{ image }}"/>
+        </figure>
+        <p class="figure-caption"><code>{{ text }}</code></p>
+    </div>
+{% endmacro %}

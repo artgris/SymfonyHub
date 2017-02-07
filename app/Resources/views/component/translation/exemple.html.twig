@@ -1,0 +1,12 @@
+{% extends ':component:base_component.html.twig' %}
+
+{% block sub_content %}
+    <p>
+        <code>
+            {% verbatim %}
+                {{ 'home_intro'|trans }}
+            {% endverbatim %}
+        </code><br/>
+        {{ 'home_intro'|trans }}
+    </p>
+{% endblock %}

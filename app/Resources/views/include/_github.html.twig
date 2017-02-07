@@ -1,0 +1,11 @@
+{% set package = version_checker(bundle) %}
+    {% block title %}
+        <h1>{{ bundle }}
+            {% include ':include:_link.html.twig' with {'url' : package.url} only %}
+        </h1>
+    {% endblock %}
+<p>
+    Last release : <span class="badge badge-pill badge-{{ package.gitHubVersion == "No release found" ? 'warning' : 'success' }}">{{ package.gitHubVersion }}</span> <br/>
+    Version used : <span class="badge badge-pill badge-{{ package.gitHubVersion != package.yourVersion ? (package.gitHubVersion == "No release found" ? 'warning' : 'danger') :  'success' }}">{{ package.yourVersion }}</span><br/>
+</p>
+<hr/>

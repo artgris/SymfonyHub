@@ -1,0 +1,25 @@
+{% block appbundle_block_label %}{% endblock %}
+{% block appbundle_block_errors %}{% endblock %}
+{% block appbundle_block_widget %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group pull-right" role="group">
+                        <a href="#" class="btn-sm btn btn-danger collection-remove collection-action"><span
+                                    class="glyphicon glyphicon-trash"></span></a>
+                        <a href="#" class="btn-sm btn btn-secondary collection-up collection-action"><span
+                                    class="glyphicon glyphicon-arrow-up"></span></a>
+                        <a href="#" class="btn-sm btn btn-secondary collection-down collection-action"><span
+                                    class="glyphicon glyphicon-arrow-down"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{ form_row(form.content) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

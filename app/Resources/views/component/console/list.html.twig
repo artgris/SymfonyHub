@@ -1,0 +1,11 @@
+{% extends ':component:base_component.html.twig' %}
+
+{% block sub_content %}
+    <div class="btn-group-vertical">
+        <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_cc') }}">Cache Clear (cc)</a>
+        <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_ad') }}">Assetic Dump (ad)</a>
+        <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_dsv') }}">Doctrine Schema Validate (dsv)</a>
+        <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_dsu') }}">Doctrine Schema Update (dsu)</a>
+        <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_dfl') }}">Doctrine Fixture Load (dfl)</a>
+    </div>
+{% endblock %}

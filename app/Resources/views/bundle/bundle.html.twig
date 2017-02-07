@@ -1,0 +1,33 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+{% import _self as macro %}
+{% macro bundle(bundles) %}
+    {% for bundle in bundles %}
+        <div class="card">
+            <div class="card-block">
+                <h4>
+                    {{ bundle.0 }}
+                    {% if bundle.1 is not empty %}
+                        {% include ':include:_link.html.twig' with {'url' : bundle.1 } only %}
+                    {% endif %}
+                </h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p> {{ bundle.3 is defined ? bundle.3 }}</p>
+                        <code>{{ bundle.2 }}</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% block sub_content %}
+    {{ macro.bundle(bundles) }}
+    <h2>{{ 'multilingual'|trans }}</h2>
+    <hr>
+    {{ macro.bundle(multilinguals) }}
+    <h2>{{ 'usefull'|trans }}</h2>
+    <hr>
+    {{ macro.bundle(useFull) }}
+{% endblock %}
+

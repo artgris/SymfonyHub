@@ -1,0 +1,15 @@
+{% extends ':service:base_service.html.twig' %}
+
+{% block sub_content %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-xs btn-primary" href="{{ path('service_export_csv') }}"><span
+                        class="glyphicon glyphicon-download"></span> {{ 'download_csv'|trans }}</a>
+            <a class="btn btn-xs btn-primary" href="{{ path('service_export_excel') }}"><span
+                        class="glyphicon glyphicon-download"></span> {{ 'download_excel'|trans }}</a>
+        </div>
+    </div>
+
+{% endblock %}
+

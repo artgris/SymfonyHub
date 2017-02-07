@@ -1,0 +1,146 @@
+# Desc: /ajax-image-upload
+admin_ajax_image_upload: /ajax-image-upload   # FIXME
+
+# Desc: /arkounay-ajax-edit-pageblocks
+arkounay_pageblocks_ajax: /arkounay-ajax-edit-pageblocks   # FIXME
+
+# Desc: /_artgris/artgris-vcb-ajax
+artgris_vcb_ajax: /_artgris/artgris-vcb-ajax   # FIXME
+
+# Desc: /bundle/
+bundle: /bundle/   # FIXME
+
+# Desc: /bundle/arkounay_block_bundle
+bundle_arkounay_block: /bundle/arkounay_block_bundle   # FIXME
+
+# Desc: /bundle/arkounay_image_bundle
+bundle_arkounay_image: /bundle/arkounay_image_bundle   # FIXME
+
+# Desc: /bundle/artgris_version_checker_bundle
+bundle_artgris_version_checker: /bundle/artgris_version_checker_bundle   # FIXME
+
+# Desc: /bundle/gregwar_image_bundle
+bundle_gregwar_image: /bundle/gregwar_image_bundle   # FIXME
+
+# Desc: /bundle/knp_paginator_bundle
+bundle_knp_paginator: /bundle/knp_paginator_bundle   # FIXME
+
+# Desc: /bundle/knp_snappy_bundle
+bundle_knp_snappy: /bundle/knp_snappy_bundle   # FIXME
+
+# Desc: /bundle/knp_snappy_bundle/image
+bundle_knp_snappy_image: /bundle/knp_snappy_bundle/image   # FIXME
+
+# Desc: /bundle/knp_snappy_bundle/pdf
+bundle_knp_snappy_pdf: /bundle/knp_snappy_bundle/pdf   # FIXME
+
+# Desc: /bundle/phone_number_bundle
+bundle_phone_number: /bundle/phone_number_bundle   # FIXME
+
+# Desc: /component/
+component: /component/   # FIXME
+
+# Desc: /component/console
+component_console: /component/console   # FIXME
+
+# Desc: /component/ad
+component_console_ad: /component/ad   # FIXME
+
+# Desc: /component/cc
+component_console_cc: /component/cc   # FIXME
+
+# Desc: /component/dfl
+component_console_dfl: /component/dfl   # FIXME
+
+# Desc: /component/dsu
+component_console_dsu: /component/dsu   # FIXME
+
+# Desc: /component/dsv
+component_console_dsv: /component/dsv   # FIXME
+
+# Desc: /component/form
+component_form: /component/form   # FIXME
+
+# Desc: /component/translation
+component_translation: /component/translation   # FIXME
+
+# Desc: /component/validator
+component_validator: /component/validator   # FIXME
+
+# Desc: /profile/change-password
+fos_user_change_password: /profile/change-password   # FIXME
+
+# Desc: /profile/edit
+fos_user_profile_edit: /profile/edit   # FIXME
+
+# Desc: /profile/
+fos_user_profile_show: /profile/   # FIXME
+
+# Desc: /register/check-email
+fos_user_registration_check_email: /register/check-email   # FIXME
+
+# Desc: /register/confirm/{token}
+fos_user_registration_confirm: '/register/confirm/{token}'   # FIXME
+
+# Desc: /register/confirmed
+fos_user_registration_confirmed: /register/confirmed   # FIXME
+
+# Desc: /register/
+fos_user_registration_register: /register/   # FIXME
+
+# Desc: /resetting/check-email
+fos_user_resetting_check_email: /resetting/check-email   # FIXME
+
+# Desc: /resetting/request
+fos_user_resetting_request: /resetting/request   # FIXME
+
+# Desc: /resetting/reset/{token}
+fos_user_resetting_reset: '/resetting/reset/{token}'   # FIXME
+
+# Desc: /resetting/send-email
+fos_user_resetting_send_email: /resetting/send-email   # FIXME
+
+# Desc: /login_check
+fos_user_security_check: /login_check   # FIXME
+
+# Desc: /login
+fos_user_security_login: /login   # FIXME
+
+# Desc: /logout
+fos_user_security_logout: /logout   # FIXME
+
+# Desc: /
+homepage_index: /   # FIXME
+
+# Desc: /service/
+service: /service/   # FIXME
+
+# Desc: /service/export
+service_export: /service/export   # FIXME
+
+# Desc: /service/export/csv
+service_export_csv: /service/export/csv   # FIXME
+
+# Desc: /service/export/excel
+service_export_excel: /service/export/excel   # FIXME
+
+# Desc: /service/mail
+service_mail: /service/mail   # FIXME
+
+# Desc: /service/mail/send
+service_mail_send: /service/mail/send   # FIXME
+
+# Desc: /twig/
+twig_twig: /twig/   # FIXME
+
+# Desc: /twig/twig-exemples/
+twig_twig_exemples: /twig/twig-exemples/   # FIXME
+
+# Desc: /twig/twig-extensions/
+twig_twig_extensions: /twig/twig-extensions/   # FIXME
+
+# Desc: /twig/grabs-sentenses/
+twig_twig_grab_sentenses: /twig/grabs-sentenses/   # FIXME
+
+# Desc: /twig/highlight/
+twig_twig_highlight: /twig/highlight/   # FIXME

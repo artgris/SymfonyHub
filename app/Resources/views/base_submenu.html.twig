@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-12 col-lg-9">
+            <p class="pull-right hidden-lg-up">
+                <button type="button" class="btn  btn-sm" data-toggle="offcanvas">Submenu</button>
+            </p>
+            {% if bundle is defined %}
+                {% include 'include/_github.html.twig' with {'bundle' : bundle} only %}
+            {% else %}
+                {% block title %}
+                    {% if title is defined %}
+                        <h1>{{ title|trans }}
+                            {% if url is defined %}
+                                {% include ':include:_link.html.twig' with {'url' : url } only %}
+                            {% endif %}</h1>
+                        <hr/>
+                    {% endif %}
+                {% endblock %}
+            {% endif %}
+            {% block sub_content "" %}
+        </div>
+        <div class="col-6 col-lg-3 sidebar-offcanvas" id="sidebar">
+            <nav class="navbar navbar-inverse bg-inverse bg-faded">
+                {% block sub_menu "" %}
+            </nav>
+            {{ show_source_code(_self) }}
+        </div>
+    </div>
+{% endblock %}

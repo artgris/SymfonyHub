@@ -1,0 +1,28 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+
+{% block sub_content %}
+    {{ pagination.getTotalItemCount }} éléments
+    <table class="table">
+        <tr>
+            {# sorting of properties based on query components #}
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'f.id') }}</th>
+            <th{% if pagination.isSorted('f.content') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Content', 'f.content') }}</th>
+            {#<th>{{ knp_pagination_sortable(pagination, 'Release', ['p.date', 'p.time']) }}</th>#}
+        </tr>
+
+        {# table body #}
+        {% for page in pagination %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ page.id }}</td>
+                <td>{{ page.content }}</td>
+                {#<td>{{ page.date | date('Y-m-d') }}, {{ page.time | date('H:i:s') }}</td>#}
+            </tr>
+        {% endfor %}
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+
+{% endblock %}

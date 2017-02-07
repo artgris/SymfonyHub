@@ -1,0 +1,170 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: en
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] } #uncomment to translation
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        url: "%env(DATABASE_URL)%"
+#        driver:   pdo_mysql
+#        host:     "%database_host%"
+#        port:     "%database_port%"
+#        dbname:   "%database_name%"
+#        user:     "%database_user%"
+#        password: "%database_password%"
+#        charset:  UTF8
+        types:
+            json_image: Arkounay\ImageBundle\Type\JsonImageType
+            json_images: Arkounay\ImageBundle\Type\JsonImagesType
+            phone_number: Misd\PhoneNumberBundle\Doctrine\DBAL\Types\PhoneNumberType
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+# FosUserBundle
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    from_email:
+        address:        noreply@domain.com
+        sender_name:    noreply
+    service:
+        mailer: fos_user.mailer.twig_swift
+
+# symfony/assetic-bundle Configuration
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: false
+    filters:
+        cssrewrite: ~
+
+
+# whiteoctober/BreadcrumbsBundle
+white_october_breadcrumbs:
+    separator: ''
+    itemClass: 'breadcrumb-item'
+
+#artgris/MaintenanceBundle
+artgris_maintenance:
+    enable: true  # Enable|Disable maintenance
+    ips: []
+
+#Gregwar/ImageBundle
+gregwar_image:
+    throw_exception: false
+
+# Multilingue
+jms_di_extra:
+    locations:
+        all_bundles: false
+        bundles: [AppBundle]
+        directories: ["%kernel.root_dir%/../src"]
+
+jms_translation:
+    configs:
+        app:
+            dirs: ['%kernel.root_dir%/../src/AppBundle/Controller','%kernel.root_dir%/../src/AppBundle/Menu', "%kernel.root_dir%/Resources/views"]
+            output_dir: '%kernel.root_dir%/Resources/translations'
+            output-format: yml
+            excluded_names: ["*TestCase.php", "*Test.php"]
+            extractors: [jms_i18n_routing]
+            keep: true
+            ignored_domains: ['FOSUserBundle']
+
+jms_i18n_routing:
+    default_locale: en
+    locales: [en, fr]
+    strategy: prefix_except_default
+
+a2lix_translation_form:
+    locales: [en, fr]
+#    default_required: false
+    default_locale: en
+    manager_registry: doctrine
+
+knp_doctrine_behaviors:
+    blameable:      false
+    geocodable:     ~     # Here null is converted to false
+    loggable:       true
+    sluggable:      true
+    soft_deletable: false
+    translatable: true
+
+# wkhtmltopdf
+knp_snappy:
+    pdf:
+        binary:    "%knp_snappy_pdf_binary%"
+    image:
+        binary:     "%knp_snappy_image_binary%"
+
+# KnpPaginatorBundle
+knp_paginator:
+    template:
+        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_pagination.html.twig
+        sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+
+
+artgris_version_checker:
+    access_token: a43ca209a9bb40123dcb875fa367b57d8704e4f9
+    lifetime: 6666
+
+knp_menu:
+    # use "twig: false" to disable the Twig extension and the TwigRenderer
+    twig:
+        template: KnpMenuBundle::menu.html.twig
+    #  if true, enables the helper for PHP templates
+    templating: false

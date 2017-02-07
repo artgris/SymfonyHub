@@ -1,0 +1,61 @@
+Send: Send
+
+action:
+    save: Save
+    show_code: 'Show code'
+
+component_intro: 'Symfony Components are a set of decoupled and reusable PHP libraries. They are becoming the standard foundation on which the best PHP applications are built on. You can use any of these components in your own applications independently from the Symfony Framework.'
+default_title: SymfonyHub
+download_csv: 'Download CSV'
+download_excel: 'Download Excel'
+
+exemple:
+    intro: exemple.intro
+
+form_message: '5 + 5 = ?'
+
+help:
+    show_code: 'Click on this button to show the source code of the <strong>Controller</strong> and <strong>template</strong> used to render this page.'
+
+home_intro: 'Hi, here I''m testing Symfony Bundles and Components & Adding "usefull" Services and Twig demos'
+
+image:
+    saved_successfully: 'Image saved successfully'
+
+mail_send: 'Mail sent successfully'
+menu_arkounay_block: 'Arkounay block'
+menu_arkounay_image: 'Arkounay image'
+menu_artgris_version_checker: 'Artgris version checker'
+menu_bundles: Bundles
+menu_component_console: 'Component console'
+menu_component_form: 'Component form'
+menu_component_translation: 'Component translation'
+menu_component_validator: 'Component validator'
+menu_components: Components
+menu_gregwar_image: 'Gregwar image'
+menu_home: Home
+menu_jms_translation: 'JMS translation'
+menu_knp_paginator: 'Knp paginator'
+menu_knp_snappy: 'Knp snappy'
+menu_phone_number: 'Phone number'
+menu_service_export: 'Service export'
+menu_service_mail: 'Service Email'
+menu_services: Services
+menu_twig: Twig
+menu_twig_exemples: 'Twig examples'
+menu_twig_extensions: 'Twig extensions'
+menu_twig_grab_sentenses: 'Twig grab sentenses'
+menu_twig_highlight: 'Twig highlight'
+multilingual: Multilingual
+send_mail: 'Send an Email'
+service_intro: ' This object, called a service container, will allow you to standardize and centralize the way objects are constructed in your application. The container makes your life easier, is super fast, and emphasizes an architecture that promotes reusable and decoupled code. Since all core Symfony classes use the container, you''ll learn how to extend, configure and use any object in Symfony. In large part, the service container is the biggest contributor to the speed and extensibility of Symfony.'
+success: 'You''re good at math =)'
+
+title:
+    controller_code: 'Controller code'
+    source_code: 'Source code'
+    twig_template_code: 'Twig template code'
+
+title_component_form_collection: 'Block collection'
+twig_intro: 'Twig is a modern template engine for PHP'
+usefull: usefull

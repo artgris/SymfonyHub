@@ -1,0 +1,5 @@
+{% extends '::base_submenu.html.twig' %}
+
+{% block sub_menu %}
+    {{ knp_menu_render('AppBundle:Builder:sidebarBundleMenu', {'currentClass' :'active'}) }}
+{% endblock %}

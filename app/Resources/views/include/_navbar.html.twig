@@ -1,0 +1,16 @@
+{% import _self as menuItem %}
+{% set route = app.request.attributes.get('_route') %}
+<nav class="navbar navbar-inverse bg-inverse navbar-light bg-faded rounded navbar-toggleable-md">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-center" href="{{ path('homepage_index') }}">SymfonyHub</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {{ knp_menu_render('AppBundle:Builder:mainMenu', {'currentClass' :'active'}) }}
+    </div>
+    {% if app.user is not empty %}
+        <div>
+            <a class="btn btn-sm btn-secondary" href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out fa-fw"></i>{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+        </div>
+    {% endif %}
+</nav>

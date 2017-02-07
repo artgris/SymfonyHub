@@ -1,0 +1,40 @@
+{% extends ':twig:base_twig.html.twig' %}
+
+{% block title %}
+    <h1>{{ 'menu_twig_grab_sentenses'|trans }}
+        {% include ':include:_link.html.twig' with {'url' : 'https://github.com/artgris/GrabSentencesExtension'} only %}
+    </h1>
+    <hr/>
+{% endblock %}
+
+{% block sub_content %}
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <code>
+                    {% verbatim %}
+                       {{ text }}
+                    {% endverbatim %}
+                </code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ text }}
+                </div>
+            </div>
+            <h3>Grab 2 sentenses</h3>
+            <p>
+                <code>
+                    {% verbatim %}
+                       {{ text|grab_sentences(2) }}
+                    {% endverbatim %}
+                </code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ text|grab_sentences(2) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

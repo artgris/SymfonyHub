@@ -1,0 +1,46 @@
+{% extends ':twig:base_twig.html.twig' %}
+
+{% block sub_content %}
+    <h3>The Text Extension
+        {% include ':include:_link.html.twig' with {'url' : 'http://twig-extensions.readthedocs.io/en/latest/text.html'} only %}
+    </h3>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <code>"Lorem ipsum dolor sit amet, consectetur adipiscing"|wordwrap(10, "&lt;/br&gt;")|raw </code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ "Lorem ipsum dolor sit amet, consectetur adipiscing"|wordwrap(10, "</br>")|raw }}
+                </div>
+            </div>
+            <p>
+                <code>"Hello World!"|truncate(5) </code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ "Hello World!"|truncate(5) }}
+                </div>
+            </div>
+            <h3>The Intl Extension
+                {% include ':include:_link.html.twig' with {'url' : 'http://twig-extensions.readthedocs.io/en/latest/intl.html'} only %}
+            </h3>
+            <p>
+                <code>"now"|localizeddate('long', 'none')</code><br/>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ "now"|localizeddate('long', 'none') }}
+                </div>
+            </div>
+            <p>
+                <code>12.5|localizedcurrency('EUR')</code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ 12.5|localizedcurrency('EUR') }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

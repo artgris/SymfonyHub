@@ -1,0 +1,54 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    grab_sentence_extension:
+        class: AppBundle\Twig\GrabSentencesExtension
+        tags:
+            - { name: twig.extension }
+
+##wordwrap et truncat
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+
+#localizeddate
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
+
+# service d'envoi de mail
+    mailing_service:
+        class: AppBundle\Service\MailingService
+        arguments: ['@swiftmailer.mailer', '@templating.engine.twig']
+
+# service d'export
+    export_service:
+        class: AppBundle\Service\ExportService
+        arguments: ['@phpexcel']
+
+# validator
+    validator.contains_code:
+        class: AppBundle\Validator\Constraints\ContainsCodeValidator
+        arguments: ['@doctrine.orm.entity_manager']
+        tags:
+            - { name: validator.constraint_validator }
+
+
+    app.menu.my_awesome_voter:
+        class: AppBundle\Menu\MyAwesomeVoter
+        arguments: ['@request_stack']
+        tags:
+            - { name: knp_menu.voter }
+
+
+    breadcrumbs:
+        class: AppBundle\Service\BreadcrumbsService
+        arguments: ['@white_october_breadcrumbs']

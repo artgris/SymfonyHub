@@ -1,0 +1,33 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+
+{% block form_theme %}
+    {% form_theme form
+    'component/form/ninsuo-symfony-collection/jquery.collection.html.twig'
+    'form/bootstrap_4_layout.html.twig' %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/arkounayimage/arkounay_image_bundle.css') }}">
+{% endblock %}
+
+{% block sub_content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_rest(form) }}
+            <button type="submit" class="btn btn-success pull-right">
+                <span class="glyphicon glyphicon-save"></span> {% trans %}action.save{% endtrans %}
+            </button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% include '@ArkounayImage/assets/include_js.html.twig' %}
+{% endblock %}

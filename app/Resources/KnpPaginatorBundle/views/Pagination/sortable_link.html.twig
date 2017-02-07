@@ -1,0 +1,13 @@
+<a{% for attr, value in options %} {{ attr }}="{{ value }}"{% endfor %}>
+{# Ajout des icons de tri de tableau pour les headers de fontAwesome #}
+{% if options.class is defined %}
+    {% if options.class == 'desc' %}
+        <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+    {% elseif options.class == 'asc' %}
+        <span class="glyphicon glyphicon-sort-by-attributes"></span>
+    {% elseif options.class == 'sortable' %}
+        <span class="glyphicon glyphicon-sort"></span>
+    {% endif %}
+{% endif %}
+    {{ title }}
+</a>

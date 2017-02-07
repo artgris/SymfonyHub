@@ -1,0 +1,30 @@
+.navbar {
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background-color: #FFFF00;
+}
+
+.card {
+    margin: 10px 0px;
+}
+h3 {
+    margin-top: 2rem;
+}
+
+
+#sourceCodeModal h3 {
+    font-size: 19px;
+    margin-top: 0
+}
+
+#sourceCodeModal h3 small {
+    color: #7b8a8b;
+    font-size: 80%
+}
+
+#sourceCodeModal pre {
+    margin-bottom: 2em;
+    padding: 0
+}

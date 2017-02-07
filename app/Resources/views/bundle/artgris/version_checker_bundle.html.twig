@@ -1,0 +1,25 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+
+{% block sub_content %}
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-inverse">
+            <tr>
+                <th>Package Name</th>
+                <th>GitHub Version</th>
+                <th class="text-center">Your version</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for key,package in versions %}
+                <tr>
+                    <th scope="row"><a target="_blank" class="btn-link btn" href="{{ package.url }}"> {{ key }}</a></th>
+                    <td class="text-center"><span class="badge badge-{{ package.gitHubVersion == "No release found" ? 'warning' : 'success' }}">{{ package.gitHubVersion }}</span></td>
+                    <td class="text-center"><span class="badge badge-{{ package.gitHubVersion != package.yourVersion ? (package.gitHubVersion == "No release found" ? 'warning' : 'danger') :  'success' }}">{{ package.yourVersion }}</span></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+

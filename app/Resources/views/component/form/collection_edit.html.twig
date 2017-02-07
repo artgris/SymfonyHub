@@ -1,0 +1,97 @@
+{% extends 'component/base_component.html.twig' %}
+
+{% block form_theme %}
+    {% if form is defined %}
+        {% form_theme form
+        'form/bootstrap_4_layout.html.twig'
+        'form/block_theme.html.twig' %}
+    {% endif %}
+{% endblock %}
+
+{% block sub_content %}
+
+    <h2>{% trans %}title_component_form_collection{% endtrans %}</h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <hr/>
+    <div class="row">
+        <div class="col-md-12">
+            <input class="btn btn-primary pull-right" type="submit" value="Save"/>
+        </div>
+    </div>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    <script>
+        $(function () {
+
+            createTinyCollection('.block-collection', '{{ form.blocks.vars.full_name }}');
+
+            var scrollPosition = 0;
+            $('.block-tinymce').each(function () {
+                initializeTinyMce("#" + $(this).attr('id'));
+            });
+
+            function createTinyCollection(selector, name_prefix) {
+                $(selector).collection({
+                    drag_drop: false,
+                    add_at_the_end: true,
+                    name_prefix: name_prefix,
+                    add: '<a href="#" class="btn-sm btn btn-primary collection-add collection-action"><span class="glyphicon glyphicon-plus"></span></a>',
+                    remove: '<a href="#" class="btn-sm btn btn-danger collection-remove collection-action"><span class="glyphicon glyphicon-trash"></span></a>',
+                    down: '<a href="#" class="btn-sm btn btn-secondary collection-down collection-action"><span class="glyphicon glyphicon-arrow-down"></span></a>',
+                    up: '<a href="#" class="btn-sm btn btn-secondary collection-up collection-action"><span class="glyphicon glyphicon-arrow-up"></span></a>',
+                    after_add: function (collection, element) {
+                        $('.block-tinymce').each(function () {
+                            tinymce.EditorManager.execCommand('mceRemoveEditor', true, $(this).attr('id'));
+                            initializeTinyMce("#" + $(this).attr('id'));
+                        });
+                        return true;
+                    },
+                    before_remove: function (collection, element) {
+                        removeEditors();
+                    },
+                    after_remove: function (collection, element) {
+                        initializeAllTiny();
+                    },
+                    before_up: function (collection, element) {
+                        removeEditors();
+                    },
+                    after_up: function (collection, element) {
+                        initializeAllTiny();
+                    },
+                    before_down: function (collection, element) {
+                        removeEditors();
+                    },
+                    after_down: function (collection, element) {
+                        initializeAllTiny();
+                    }
+                });
+            }
+
+            function removeEditors() {
+                scrollPosition = $(window).scrollTop();
+                $('.block-tinymce').each(function () {
+                    tinymce.EditorManager.execCommand('mceRemoveEditor', true, $(this).attr('id'));
+                });
+                return true;
+            }
+
+            function initializeAllTiny() {
+                $('.block-tinymce').each(function () {
+                    initializeTinyMce("#" + $(this).attr('id'));
+                });
+                $(window).scrollTop(scrollPosition);
+                return true;
+            }
+        });
+
+    </script>
+
+{% endblock %}

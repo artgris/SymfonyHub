@@ -1,0 +1,23 @@
+{% extends ':twig:base_twig.html.twig' %}
+{% import _self as span %}
+{% block sub_content %}
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <code>
+                    {{ '{{ text|replace({ \'dolore\': \'<span class="highlight">dolore</span>\'})|raw }} '|e }}
+                </code>
+            </p>
+
+            <div class="card">
+                <div class="card-block">
+                    {{ span.hightlight(text) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% macro hightlight(text, word) %}
+    {{ text|replace({'dolore': '<span class="highlight">dolore</span>'})|raw }}
+{% endmacro %}

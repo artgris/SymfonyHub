@@ -1,0 +1,29 @@
+{% extends ':twig:base_twig.html.twig' %}
+
+{% block sub_content %}
+
+    <h3>Filtre
+        {% include ':include:_link.html.twig' with {'url' : 'http://twig.sensiolabs.org/doc/filters/index.html'} only %}
+    </h3>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>date </h3>
+            <p>
+                <code>"now"|date('d/m/Y à H\\hi', "Europe/Paris")</code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ "now"|date('d/m/Y à H\\hi', "Europe/Paris") }}
+                </div>
+            </div>
+            <p>
+                <code> "now"|date_modify("+1 day")|date('d/m/Y à H\\hi', "Europe/Paris") </code>
+            </p>
+            <div class="card">
+                <div class="card-block">
+                    {{ "now"|date_modify("+1 day")|date('d/m/Y à H\\hi', "Europe/Paris") }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

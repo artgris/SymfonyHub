@@ -1,0 +1,36 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+
+{% block sub_content %}
+
+    {{ form_start(form) }}
+
+    <div class="row">
+        {{ form_errors(form.phone_number) }}
+        {% for phone_number in form.phone_number %}
+            <div class="col-md-{{ loop.index is odd ? 3 : 6 }}">
+                {{ form_row(phone_number) }}
+            </div>
+        {% endfor %}
+    </div>
+
+    {{ form_rest(form) }}
+
+    <hr/>
+
+    <button type="submit" class="btn btn-success pull-right">
+        <span class="glyphicon glyphicon-save"></span> Enregistrer
+    </button>
+
+    {{ form_end(form) }}
+    {% if contact.phoneNumber %}
+
+        <ul>
+            <li>
+                NATIONAL : {{ contact.phoneNumber|phone_number_format('NATIONAL') }}
+            </li>
+            <li>
+                INTERNATIONAL : {{ contact.phoneNumber|phone_number_format }}
+            </li>
+        </ul>
+    {% endif %}
+{% endblock %}

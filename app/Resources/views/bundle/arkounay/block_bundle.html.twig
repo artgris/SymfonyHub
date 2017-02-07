@@ -1,0 +1,34 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% include '@ArkounayBlock/assets/include_css.html.twig' %}
+{% endblock %}
+
+{% block sub_content %}
+    <h1>{{ render_block('h1') }}</h1>
+    <h2>{{ render_block('h2') }}</h2>
+    <p>{{ render_block('p') }}</p>
+    <hr/>
+    <h3>Render block</h3>
+    <code> {% raw %} {{ render_block('block_id') }} {% endraw %}</code> : {{ render_block('block_id') }}
+    <hr/>
+    <h3>Render block (span)</h3>
+    <code> {% raw %} {{ render_block('block_id_span', true, 'span') }} {% endraw %}</code> : {{ render_block('block_id_span', true, 'span') }}
+    <hr/>
+    <h3>Render block, not editable</h3>
+    <code> {% raw %} {{ render_block('block_id_not_editable', false) }} {% endraw %}</code> : {{ render_block('block_id_not_editable', false) }}
+    <hr/>
+    <h3>Render Entity</h3>
+    <code> {% raw %} {{ render_entity_field(entity, 'content') }} {% endraw %}</code> : {{ render_entity_field(entity, 'content') }}
+    <hr/>
+    <h3>Render plain entity</h3>
+    <code> {% raw %} {{ render_plain_entity_field(entity, 'content') }} {% endraw %}</code> : {{ render_plain_entity_field(entity, 'content') }}
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% include '@ArkounayBlock/assets/include_js.html.twig' %}
+{% endblock %}

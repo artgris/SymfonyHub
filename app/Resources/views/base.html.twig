@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {#<link rel="icon" href="../../favicon.ico">#}
+    <title>{% block meta_title %}{{ meta_title|default('default_title')|trans }}{% endblock %}</title>
+
+    {% block form_theme %}
+        {% if form is defined %}
+            {% form_theme form 'form/bootstrap_4_layout.html.twig' %}
+        {% endif %}
+    {% endblock %}
+
+    {% block stylesheets %}
+
+        {% stylesheets
+        'plugins/bootstrap/bootstrap.min.css'
+        'plugins/jquery-ui-1.12.1.custom/jquery-ui.min.css'
+        'plugins/components-font-awesome/css/font-awesome.min.css'
+        'plugins/datatables/css/dataTables.bootstrap.min.css'
+        'plugins/drmonty-datatables-responsive/css/dataTables.responsive.min.css'
+        'plugins/select2/css/select2.min.css'
+        'plugins/eonasdan-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'
+        'css/dashboard.css'
+        'css/glyphicons.css'
+        'css/offcanvas.css' filter='cssrewrite' %}
+        <link rel="stylesheet"
+              href="{{ asset_url }}"/>
+
+        <link rel="stylesheet" href="{{ asset('css/highlight-solarized-light.css') }}">
+        {% endstylesheets %}
+
+    {% endblock %}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+
+    {% include 'include/_navbar.html.twig' %}
+    {{ wo_render_breadcrumbs() }}
+    {% include 'include/_flash_messages.html.twig' %}
+    {% block content "" %}
+</div>
+
+{% block javascripts %}
+    {#Jquery#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    {#Bootstrap#}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    {#Datatable#}
+    <script src="{{ asset('plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('plugins/datatables/js/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('plugins/drmonty-datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+    {#Jquery Collection#}
+    <script src="{{ asset('plugins/jquery.collection/jquery.collection.js') }}"></script>
+    {#Select 2#}
+    <script src="{{ asset('plugins/select2/js/select2.min.js') }}"></script>
+    <script src="{{ asset('plugins/select2/js/i18n/fr.js') }}"></script>
+    {#Tinymce#}
+    <script src="{{ asset('plugins/tinymce/tinymce.min.js') }}"></script>
+    {#Datatimepicker#}
+    <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('plugins/moment/fr.js') }}"></script>
+    <script src="{{ asset('plugins/eonasdan-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+    {#highlighting#}
+    <script src="{{ asset('js/highlight.pack.js') }}"></script>
+
+    {% javascripts
+    'js/datatables-fr.js'
+    'js/tiny_mce.js'
+    'js/image.js'
+    'js/offcanvas.js'
+    'js/main.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+</body>
+</html>

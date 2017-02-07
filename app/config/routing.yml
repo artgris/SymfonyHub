@@ -1,0 +1,17 @@
+services:fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+JMSTranslationBundle_ui:
+    resource: "@JMSTranslationBundle/Controller/"
+    type: annotation
+    prefix: /_trans
+
+arkounay_image:
+   resource: "@ArkounayImageBundle/Resources/config/routing.yml"
+
+block:
+   resource: "@ArkounayBlockBundle/Resources/config/routing.yml"
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

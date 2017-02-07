@@ -1,0 +1,25 @@
+{% if wo_breadcrumbs()|length %}
+    {%- spaceless -%}
+        <ol id="{{ listId }}" class="{{ listClass }}">
+            <li{% if itemClass is defined and itemClass|length %} class="{{ itemClass }}"{% endif %}>
+                <a href="{{ path('homepage_index') }}">
+                    {{ 'menu_home'|trans }}
+                </a>
+            </li>
+            {% for b in breadcrumbs %}
+                <li{% if itemClass is defined and itemClass|length %} class="{{ itemClass }}"{% endif %}>
+                    {% if b.url and not loop.last %}
+                    <a href="{{ b.url }}"{% if linkRel is defined and linkRel|length %} rel="{{ linkRel }}"{% endif %}>
+                        {% endif %}
+                        {{- b.text | trans(b.translationParameters, translation_domain, locale) -}}
+                        {% if b.url and not loop.last %}
+                    </a>
+                    {% endif %}
+                    {% if separator is not null and not loop.last %}
+                        <span class='{{ separatorClass }}'>{{ separator }}</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ol>
+    {%- endspaceless -%}
+{% endif %}
