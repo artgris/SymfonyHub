@@ -100,7 +100,7 @@ white_october_breadcrumbs:
 
 #artgris/MaintenanceBundle
 artgris_maintenance:
-    enable: true  # Enable|Disable maintenance
+    enable: false  # Enable|Disable maintenance
     ips: []
 
 #Gregwar/ImageBundle
