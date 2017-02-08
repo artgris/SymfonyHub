@@ -240,6 +240,18 @@ class BundleController extends Controller
 
 
     /**
+     * @Route("/interactive_svg_bundle", name="bundle_interactive_svg")
+     */
+    public function InteractiveSVGAction()
+    {
+        $this->generateBreadcrumbs()->addItem('menu_interactive_svg');
+        return $this->render('bundle/artgris/interactive_svg_bundle.html.twig', [
+            'bundle' => 'artgris/InteractiveSVGBundle'
+        ]);
+
+    }
+
+    /**
      * @return object|\WhiteOctober\BreadcrumbsBundle\Model\Breadcrumbs
      */
     private function generateBreadcrumbs()

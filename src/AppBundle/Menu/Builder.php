@@ -55,6 +55,7 @@ class Builder implements ContainerAwareInterface
 		$menu->addChild('menu_knp_snappy', ['route' => 'bundle_knp_snappy', 'label' => 'menu_knp_snappy']);
 		$menu->addChild('menu_phone_number', ['route' => 'bundle_phone_number', 'label' => 'menu_phone_number']);
 		$menu->addChild('menu_artgris_version_checker', ['route' => 'bundle_artgris_version_checker', 'label' => 'menu_artgris_version_checker']);
+		$menu->addChild('menu_interactive_svg', ['route' => 'bundle_interactive_svg', 'label' => 'menu_interactive_svg']);
 		$menu->addChild('menu_gregwar_image', ['route' => 'bundle_gregwar_image', 'label' => 'menu_gregwar_image']);
 		$menu->addChild('menu_translation', ['route' => 'jms_translation_index', 'label' => 'menu_jms_translation']);
 		return $this->addChildrensAttributs($menu);

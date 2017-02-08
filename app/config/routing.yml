@@ -15,3 +15,8 @@ block:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+interactiveSVGBundle:
+    resource: "@ArtgrisInteractiveSVGBundle/Controller/"
+    type: annotation
+    prefix: /_svg  #for example

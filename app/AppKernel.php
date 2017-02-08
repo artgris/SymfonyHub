@@ -43,7 +43,7 @@ class AppKernel extends Kernel
 
 			new Artgris\VersionCheckerBundle\ArtgrisVersionCheckerBundle(),
 			new CodeExplorerBundle\CodeExplorerBundle(),
-
+            new Artgris\Bundle\InteractiveSVGBundle\ArtgrisInteractiveSVGBundle()
 		];
 
 		if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

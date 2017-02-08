@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed5ac361aa3e77165c84ae185cf60568",
-    "content-hash": "91ea36c58f28394454ce1533aae03b1c",
+    "hash": "e477165d2161b904f26caad67c01cf19",
+    "content-hash": "fae211f34cfa4e96e406ede7a2b2a7ac",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -160,6 +160,50 @@
                 "symfony"
             ],
             "time": "2017-01-30 07:49:03"
+        },
+        {
+            "name": "artgris/interactive-svg-bundle",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artgris/InteractiveSVGBundle.git",
+                "reference": "8b8a85d4a7f589b0cd2084ca1ed107fcfcb7fe33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artgris/InteractiveSVGBundle/zipball/8b8a85d4a7f589b0cd2084ca1ed107fcfcb7fe33",
+                "reference": "8b8a85d4a7f589b0cd2084ca1ed107fcfcb7fe33",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.9 || ^7.0",
+                "symfony/framework-bundle": "^2.8 || ^3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Artgris\\Bundle\\InteractiveSVGBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arthur Gribet",
+                    "email": "a.gribet@gmail.com"
+                }
+            ],
+            "description": "Symfony Bundle to handle SVG graphics elements (titles, fills and strokes colors) and generate an interactive SVG",
+            "homepage": "https://github.com/artgris/InteractiveSVGBundle",
+            "keywords": [
+                "bundle",
+                "image",
+                "svg",
+                "symfony"
+            ],
+            "time": "2017-01-31 21:35:35"
         },
         {
             "name": "artgris/maintenance-bundle",

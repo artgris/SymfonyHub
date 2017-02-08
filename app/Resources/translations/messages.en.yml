@@ -8,6 +8,7 @@ component_intro: 'Symfony Components are a set of decoupled and reusable PHP lib
 default_title: SymfonyHub
 download_csv: 'Download CSV'
 download_excel: 'Download Excel'
+editor: 'SVGs Editor'
 
 exemple:
     intro: exemple.intro
@@ -34,6 +35,7 @@ menu_component_validator: 'Component validator'
 menu_components: Components
 menu_gregwar_image: 'Gregwar image'
 menu_home: Home
+menu_interactive_svg: 'Artgris interactive SVG'
 menu_jms_translation: 'JMS translation'
 menu_knp_paginator: 'Knp paginator'
 menu_knp_snappy: 'Knp snappy'

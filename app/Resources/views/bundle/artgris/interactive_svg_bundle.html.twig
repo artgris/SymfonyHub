@@ -1,0 +1,30 @@
+{% extends ':bundle:base_bundle.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/artgrisinteractivesvg/css/front/front.css') }}"/>
+{% endblock %}
+
+{% block sub_content %}
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                <code>
+                    {% verbatim %}
+                      {{ interactive('suv.svg') }}
+                    {% endverbatim %}
+                </code>
+            </p>
+        </div>
+         <div class="col-md-6 text-right">
+             <a target="_blank" class="btn btn-secondary" href="{{ path('svg_list') }}">{{ 'editor'|trans }}</a>
+         </div>
+    </div>
+    {{ interactive('suv.svg') }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/artgrisinteractivesvg/js/front/front.js') }}"></script>
+{% endblock %}

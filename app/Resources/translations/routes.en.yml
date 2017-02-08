@@ -1,146 +1,155 @@
 # Desc: /ajax-image-upload
-admin_ajax_image_upload: /ajax-image-upload   # FIXME
+admin_ajax_image_upload: /ajax-image-upload
 
 # Desc: /arkounay-ajax-edit-pageblocks
-arkounay_pageblocks_ajax: /arkounay-ajax-edit-pageblocks   # FIXME
+arkounay_pageblocks_ajax: /arkounay-ajax-edit-pageblocks
 
 # Desc: /_artgris/artgris-vcb-ajax
-artgris_vcb_ajax: /_artgris/artgris-vcb-ajax   # FIXME
+artgris_vcb_ajax: /_artgris/artgris-vcb-ajax
 
 # Desc: /bundle/
-bundle: /bundle/   # FIXME
+bundle: /bundle/
 
 # Desc: /bundle/arkounay_block_bundle
-bundle_arkounay_block: /bundle/arkounay_block_bundle   # FIXME
+bundle_arkounay_block: /bundle/arkounay_block_bundle
 
 # Desc: /bundle/arkounay_image_bundle
-bundle_arkounay_image: /bundle/arkounay_image_bundle   # FIXME
+bundle_arkounay_image: /bundle/arkounay_image_bundle
 
 # Desc: /bundle/artgris_version_checker_bundle
-bundle_artgris_version_checker: /bundle/artgris_version_checker_bundle   # FIXME
+bundle_artgris_version_checker: /bundle/artgris_version_checker_bundle
 
 # Desc: /bundle/gregwar_image_bundle
-bundle_gregwar_image: /bundle/gregwar_image_bundle   # FIXME
+bundle_gregwar_image: /bundle/gregwar_image_bundle
+
+# Desc: /bundle/interactive_svg_bundle
+bundle_interactive_svg: /bundle/interactive_svg_bundle
 
 # Desc: /bundle/knp_paginator_bundle
-bundle_knp_paginator: /bundle/knp_paginator_bundle   # FIXME
+bundle_knp_paginator: /bundle/knp_paginator_bundle
 
 # Desc: /bundle/knp_snappy_bundle
-bundle_knp_snappy: /bundle/knp_snappy_bundle   # FIXME
+bundle_knp_snappy: /bundle/knp_snappy_bundle
 
 # Desc: /bundle/knp_snappy_bundle/image
-bundle_knp_snappy_image: /bundle/knp_snappy_bundle/image   # FIXME
+bundle_knp_snappy_image: /bundle/knp_snappy_bundle/image
 
 # Desc: /bundle/knp_snappy_bundle/pdf
-bundle_knp_snappy_pdf: /bundle/knp_snappy_bundle/pdf   # FIXME
+bundle_knp_snappy_pdf: /bundle/knp_snappy_bundle/pdf
 
 # Desc: /bundle/phone_number_bundle
-bundle_phone_number: /bundle/phone_number_bundle   # FIXME
+bundle_phone_number: /bundle/phone_number_bundle
 
 # Desc: /component/
-component: /component/   # FIXME
+component: /component/
 
 # Desc: /component/console
-component_console: /component/console   # FIXME
+component_console: /component/console
 
 # Desc: /component/ad
-component_console_ad: /component/ad   # FIXME
+component_console_ad: /component/ad
 
 # Desc: /component/cc
-component_console_cc: /component/cc   # FIXME
+component_console_cc: /component/cc
 
 # Desc: /component/dfl
-component_console_dfl: /component/dfl   # FIXME
+component_console_dfl: /component/dfl
 
 # Desc: /component/dsu
-component_console_dsu: /component/dsu   # FIXME
+component_console_dsu: /component/dsu
 
 # Desc: /component/dsv
-component_console_dsv: /component/dsv   # FIXME
+component_console_dsv: /component/dsv
 
 # Desc: /component/form
-component_form: /component/form   # FIXME
+component_form: /component/form
 
 # Desc: /component/translation
-component_translation: /component/translation   # FIXME
+component_translation: /component/translation
 
 # Desc: /component/validator
-component_validator: /component/validator   # FIXME
+component_validator: /component/validator
 
 # Desc: /profile/change-password
-fos_user_change_password: /profile/change-password   # FIXME
+fos_user_change_password: /profile/change-password
 
 # Desc: /profile/edit
-fos_user_profile_edit: /profile/edit   # FIXME
+fos_user_profile_edit: /profile/edit
 
 # Desc: /profile/
-fos_user_profile_show: /profile/   # FIXME
+fos_user_profile_show: /profile/
 
 # Desc: /register/check-email
-fos_user_registration_check_email: /register/check-email   # FIXME
+fos_user_registration_check_email: /register/check-email
 
 # Desc: /register/confirm/{token}
-fos_user_registration_confirm: '/register/confirm/{token}'   # FIXME
+fos_user_registration_confirm: '/register/confirm/{token}'
 
 # Desc: /register/confirmed
-fos_user_registration_confirmed: /register/confirmed   # FIXME
+fos_user_registration_confirmed: /register/confirmed
 
 # Desc: /register/
-fos_user_registration_register: /register/   # FIXME
+fos_user_registration_register: /register/
 
 # Desc: /resetting/check-email
-fos_user_resetting_check_email: /resetting/check-email   # FIXME
+fos_user_resetting_check_email: /resetting/check-email
 
 # Desc: /resetting/request
-fos_user_resetting_request: /resetting/request   # FIXME
+fos_user_resetting_request: /resetting/request
 
 # Desc: /resetting/reset/{token}
-fos_user_resetting_reset: '/resetting/reset/{token}'   # FIXME
+fos_user_resetting_reset: '/resetting/reset/{token}'
 
 # Desc: /resetting/send-email
-fos_user_resetting_send_email: /resetting/send-email   # FIXME
+fos_user_resetting_send_email: /resetting/send-email
 
 # Desc: /login_check
-fos_user_security_check: /login_check   # FIXME
+fos_user_security_check: /login_check
 
 # Desc: /login
-fos_user_security_login: /login   # FIXME
+fos_user_security_login: /login
 
 # Desc: /logout
-fos_user_security_logout: /logout   # FIXME
+fos_user_security_logout: /logout
 
 # Desc: /
-homepage_index: /   # FIXME
+homepage_index: /
 
 # Desc: /service/
-service: /service/   # FIXME
+service: /service/
 
 # Desc: /service/export
-service_export: /service/export   # FIXME
+service_export: /service/export
 
 # Desc: /service/export/csv
-service_export_csv: /service/export/csv   # FIXME
+service_export_csv: /service/export/csv
 
 # Desc: /service/export/excel
-service_export_excel: /service/export/excel   # FIXME
+service_export_excel: /service/export/excel
 
 # Desc: /service/mail
-service_mail: /service/mail   # FIXME
+service_mail: /service/mail
 
 # Desc: /service/mail/send
-service_mail_send: /service/mail/send   # FIXME
+service_mail_send: /service/mail/send
+
+# Desc: /_svg/edit/{svgRelativePathname}
+svg_edit: '/_svg/edit/{svgRelativePathname}'
+
+# Desc: /_svg/
+svg_list: /_svg/
 
 # Desc: /twig/
-twig_twig: /twig/   # FIXME
+twig_twig: /twig/
 
 # Desc: /twig/twig-exemples/
-twig_twig_exemples: /twig/twig-exemples/   # FIXME
+twig_twig_exemples: /twig/twig-exemples/
 
 # Desc: /twig/twig-extensions/
-twig_twig_extensions: /twig/twig-extensions/   # FIXME
+twig_twig_extensions: /twig/twig-extensions/
 
 # Desc: /twig/grabs-sentenses/
-twig_twig_grab_sentenses: /twig/grabs-sentenses/   # FIXME
+twig_twig_grab_sentenses: /twig/grabs-sentenses/
 
 # Desc: /twig/highlight/
-twig_twig_highlight: /twig/highlight/   # FIXME
+twig_twig_highlight: /twig/highlight/
