@@ -17,7 +17,7 @@ form_message: '5 + 5 = ?'
 help:
     show_code: 'Click on this button to show the source code of the <strong>Controller</strong> and <strong>template</strong> used to render this page.'
 
-home_intro: 'Hi, here I''m testing Symfony Bundles and Components & Adding "usefull" Services and Twig demos'
+home_intro: 'Hi, here I''Testing Symfony Bundles and Components | Adding Services and Twig demos'
 
 image:
     saved_successfully: 'Image saved successfully'
@@ -58,4 +58,4 @@ title:
 
 title_component_form_collection: 'Block collection'
 twig_intro: 'Twig is a modern template engine for PHP'
-usefull: usefull
+useful: useful
