@@ -47,7 +47,7 @@ Requirements
 Global Commands
 ---------------
 
-  * Run the extraction process (transations)
+  * Run the extraction process
 
         php bin/console translation:extract en --config=app
     
