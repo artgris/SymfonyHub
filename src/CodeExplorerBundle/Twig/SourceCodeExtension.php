@@ -64,7 +64,7 @@ class SourceCodeExtension extends \Twig_Extension
 
         $classCode = file($method->getFileName());
         $methodCode = array_slice($classCode, $method->getStartLine() - 1, $method->getEndLine() - $method->getStartLine() + 1);
-        $controllerCode = '    '.$method->getDocComment()."\n".implode('', $methodCode);
+        $controllerCode = '    ' . $method->getDocComment() . "\n" . implode('', $methodCode);
 
         return [
             'file_path' => $method->getFileName(),
@@ -99,16 +99,22 @@ class SourceCodeExtension extends \Twig_Extension
 
     private function getTemplateSource(\Twig_Template $template)
     {
-        $templateSource = $template->getSourceContext();
+        $filePath = $this->kernelRootDir . '/Resources/views/' . $template->getTemplateName();
+        $sourceCode = $template->getSource();
+
+        // Temporary workaround for https://github.com/twigphp/Twig/issues/2011
+        if (empty($sourceCode)) {
+            $sourceCode = @file_get_contents($filePath);
+        }
 
         return [
             // Twig templates are not always stored in files (they can be stored
             // in a database for example). However, for the needs of the Symfony
             // Demo app, we consider that all templates are stored in files and
             // that their file paths can be obtained through the source context.
-            'file_path' => $templateSource->getPath(),
+            'file_path' => $filePath,
             'starting_line' => 1,
-            'source_code' => $templateSource->getCode(),
+            'source_code' => $sourceCode
         ];
     }
 
