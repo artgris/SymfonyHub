@@ -1,6 +1,34 @@
 # SymfonyHub
 Testing Symfony Bundles and Components | Adding Services and Twig demos
 
+Bundles list
+------------
+
+http://symfonyhub.artgris.me/bundle/ :
+
+        "arkounay/image-bundle": "^2.0",
+        "arkounay/block-bundle": "^1.2",
+        "knplabs/knp-paginator-bundle": "^2.5",
+        "knplabs/knp-snappy-bundle": "~1.4",
+        "misd/phone-number-bundle": "^1.2",
+        "gregwar/image-bundle": "dev-master",
+        "knplabs/knp-menu-bundle": "^2.1",
+        "artgris/version-checker-bundle": "^1.0",
+        "artgris/interactive-svg-bundle": "^0.1.0",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "symfony/assetic-bundle": "^2.8",
+        "whiteoctober/breadcrumbs-bundle": "^1.2",
+        "stof/doctrine-extensions-bundle": "^1.2",
+        "artgris/maintenance-bundle": "^1.0",
+        "liuggio/excelbundle": "^2.1",
+
+        # i18n
+        "jms/translation-bundle": "dev-master",
+        "jms/di-extra-bundle": "dev-master",
+        "jms/i18n-routing-bundle": "dev-master",
+        "a2lix/translation-form-bundle": "2.*",
+        "knplabs/doctrine-behaviors": "~1.1",
+
 Requirements
 ------------
 

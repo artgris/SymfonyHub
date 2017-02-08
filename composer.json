@@ -38,6 +38,7 @@
 
         "knplabs/knp-menu-bundle": "^2.1",
         "artgris/version-checker-bundle": "^1.0",
+        "artgris/interactive-svg-bundle": "^0.1.0",
 
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "symfony/assetic-bundle": "^2.8",
@@ -55,8 +56,7 @@
         "soundasleep/html2text": "~0.3",
         "twig/extensions": "^1.4",
 
-        "twig/twig": "1.*",
-        "artgris/interactive-svg-bundle": "^0.1.0"
+        "twig/twig": "1.*"
 
     },
     "require-dev": {

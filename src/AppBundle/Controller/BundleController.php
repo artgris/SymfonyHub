@@ -36,6 +36,8 @@ class BundleController extends Controller
             ['KnpLabs/KnpPaginatorBundle', 'https://github.com/KnpLabs/KnpPaginatorBundle', 'composer require knplabs/knp-paginator-bundle'],
             ['KnpLabs/KnpSnappyBundle', ' https://github.com/KnpLabs/KnpSnappyBundle', '"knplabs/knp-snappy-bundle": "~1.4"'],
             ['misd/phone-number-bundle', 'https://github.com/misd-service-development/phone-number-bundle', 'composer require misd/phone-number-bundle', "This bundle integrates Google's libphonenumber into your Symfony2 application through the giggsey/libphonenumber-for-php port."],
+            ['artgris/version-checker-bundle', 'https://github.com/artgris/VersionCheckerBundle', 'composer require artgris/version-checker-bundle'],
+            ['artgris/InteractiveSVGBundle', 'https://github.com/artgris/InteractiveSVGBundle', 'composer require artgris/interactive-svg-bundle'],
             ['Gregwar/ImageBundle', 'https://github.com/Gregwar/ImageBundle', '"gregwar/image-bundle": "dev-master"'],
             ['FOSUserBundle', 'https://github.com/FriendsOfSymfony/FOSUserBundle', 'c require friendsofsymfony/user-bundle "~2.0@dev'],
             ['Asset Management', 'https://symfony.com/doc/current/assetic/asset_management.html', 'c require symfony/assetic-bundle'],
@@ -44,7 +46,6 @@ class BundleController extends Controller
             ['artgris/MaintenanceBundle', 'https://github.com/artgris/MaintenanceBundle', 'c require artgris/maintenance-bundle'],
             ['liuggio/ExcelBundle', 'https://github.com/liuggio/ExcelBundle', '"liuggio/excelbundle": "^2.1"', "This bundle permits you to create, modify and read excel objects"],
             ['knplabs/knp-menu-bundle', "https://github.com/KnpLabs/KnpMenuBundle", 'composer require knplabs/knp-menu-bundle "^2.0"'],
-            ['artgris/version-checker-bundle', 'https://github.com/artgris/VersionCheckerBundle', 'composer require artgris/version-checker-bundle']
 
         ];
         $multilinguals = [
