@@ -1,2 +1,2 @@
 # SymfonyHub
-Testing Symfony Bundles and Components | Adding "usefull" Services and Twig demos
+Testing Symfony Bundles and Components | Adding Services and Twig demos
