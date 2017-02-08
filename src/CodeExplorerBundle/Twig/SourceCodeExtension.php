@@ -99,10 +99,9 @@ class SourceCodeExtension extends \Twig_Extension
 
     private function getTemplateSource(\Twig_Template $template)
     {
-        $filePath = $this->kernelRootDir . '/Resources/views/' . $template->getTemplateName();
-        $sourceCode = $template->getSource();
 
-        // Temporary workaround for https://github.com/twigphp/Twig/issues/2011
+        $filePath = $this->kernelRootDir . '/Resources/views/' . str_replace(':', '', $template->getTemplateName());
+        $sourceCode = $template->getSource();
         if (empty($sourceCode)) {
             $sourceCode = @file_get_contents($filePath);
         }
