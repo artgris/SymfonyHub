@@ -1,16 +1,24 @@
 {% extends ':bundle:base_bundle.html.twig' %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
+    <div class="row">
+        <div class="col-md-12">
+            <p><a href="https://github.com/KnpLabs/snappy" target="_blank">Snappy</a> is a PHP (5.3+) wrapper for the <a
+                        href="http://wkhtmltopdf.org/" target="_blank">wkhtmltopdf</a> conversion utility.
+                It allows you to generate either pdf or image files from your html documents, using the webkit engine.
+            </p>
 
-    <p><a href="https://github.com/KnpLabs/snappy" target="_blank">Snappy</a> is a PHP (5.3+) wrapper for the <a href="http://wkhtmltopdf.org/" target="_blank">wkhtmltopdf</a> conversion utility.
-        It allows you to generate either pdf or image files from your html documents, using the webkit engine.
-    </p>
+            <p>
+                <a class="btn btn-secondary" href="{{ path('bundle_knp_snappy_pdf') }}"><span
+                            class="fa fa-download"></span>
+                    Exemple 1 - generate a PDF</a>
+            </p>
 
-    <p>
-        <a class="btn btn-secondary" href="{{ path('bundle_knp_snappy_pdf') }}"><span class="fa fa-download"></span> Exemple 1 - generate a PDF</a>
-    </p>
-
-    <p>
-        <a class="btn btn-secondary" href="{{ path('bundle_knp_snappy_image') }}"><span class="fa fa-download"></span> Exemple 2 - generate an image</a>
-    </p>
+            <p>
+                <a class="btn btn-secondary" href="{{ path('bundle_knp_snappy_image') }}"><span
+                            class="fa fa-download"></span> Exemple 2 - generate an image</a>
+            </p>
+        </div>
+    </div>
 {% endblock %}

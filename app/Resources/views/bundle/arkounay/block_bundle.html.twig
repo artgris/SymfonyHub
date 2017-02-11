@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     <h1>{{ render_block('h1') }}</h1>
     <h2>{{ render_block('h2') }}</h2>
     <p>{{ render_block('p') }}</p>
@@ -24,8 +25,6 @@
     <hr/>
     <h3>Render plain entity</h3>
     <code> {% raw %} {{ render_plain_entity_field(entity, 'content') }} {% endraw %}</code> : {{ render_plain_entity_field(entity, 'content') }}
-
-
 {% endblock %}
 
 {% block javascripts %}

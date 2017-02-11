@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     <div class="row">
         <div class="col-md-6">
             <p>
@@ -21,7 +22,6 @@
          </div>
     </div>
     {{ interactive('suv.svg') }}
-
 {% endblock %}
 
 {% block javascripts %}

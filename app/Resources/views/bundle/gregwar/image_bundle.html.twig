@@ -2,6 +2,7 @@
 {% import _self as self %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     <h3>Basic</h3>
     <div class="row">
         {{ self.figure(image(imageLena), 'image') }}

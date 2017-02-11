@@ -1,6 +1,7 @@
 {% extends ':twig:base_twig.html.twig' %}
 {% import _self as span %}
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     <div class="row">
         <div class="col-md-12">
             <p>

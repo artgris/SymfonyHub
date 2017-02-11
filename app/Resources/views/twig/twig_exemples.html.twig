@@ -1,7 +1,7 @@
 {% extends ':twig:base_twig.html.twig' %}
 
 {% block sub_content %}
-
+    {{ show_source_code(_self) }}
     <h3>Filtre
         {% include ':include:_link.html.twig' with {'url' : 'http://twig.sensiolabs.org/doc/filters/index.html'} only %}
     </h3>

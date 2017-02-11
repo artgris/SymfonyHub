@@ -1,6 +1,7 @@
 {% extends ':twig:base_twig.html.twig' %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     <h3>The Text Extension
         {% include ':include:_link.html.twig' with {'url' : 'http://twig-extensions.readthedocs.io/en/latest/text.html'} only %}
     </h3>

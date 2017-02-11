@@ -1,6 +1,7 @@
 {% extends ':bundle:base_bundle.html.twig' %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     {{ pagination.getTotalItemCount }} éléments
     <table class="table">
         <tr>

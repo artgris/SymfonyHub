@@ -1,6 +1,7 @@
 {% extends ':component:base_component.html.twig' %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     <div class="btn-group-vertical">
         <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_cc') }}">Cache Clear (cc)</a>
         <a class="btn btn-outline-danger btn-sm" href="{{ path('component_console_ad') }}">Assetic Dump (ad)</a>

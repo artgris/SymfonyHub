@@ -1,7 +1,7 @@
 {% extends ':service:base_service.html.twig' %}
 
 {% block sub_content %}
-
+    {{ show_source_code(_self) }}
     <div class="row">
         <div class="col-md-6">
             <a class="btn btn-xs btn-primary" href="{{ path('service_export_csv') }}"><span

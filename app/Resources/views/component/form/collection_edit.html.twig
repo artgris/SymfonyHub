@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block sub_content %}
-
+    {{ show_source_code(_self) }}
     <h2>{% trans %}title_component_form_collection{% endtrans %}</h2>
     {{ form_start(form) }}
     {{ form_widget(form) }}

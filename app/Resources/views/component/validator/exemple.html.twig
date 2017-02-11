@@ -1,6 +1,7 @@
 {% extends 'component/base_component.html.twig' %}
 
 {% block sub_content %}
+    {{ show_source_code(_self) }}
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}

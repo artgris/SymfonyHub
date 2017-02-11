@@ -55,7 +55,7 @@ class BundleController extends Controller
             ['jms/i18n-routing-bundle', ' http://jmsyst.com/bundles/JMSI18nRoutingBundle', '"jms/i18n-routing-bundle": "dev-master"', "This bundle allows you to create i18n routes"],
             ['a2lix/translation-form-bundle', 'http://a2lix.fr/bundles/translation-form/3.x.html', '"a2lix/translation-form-bundle": "2.*"'],
         ];
-        $useFull = [
+        $useFul = [
             ['soundasleep/html2text', '', ' "soundasleep/html2text": "~0.3"'],
             ['twig/extensions', 'http://twig.sensiolabs.org/doc/extensions/index.html', ' "twig/extensions": "^1.4"'],
             ['doctrine/doctrine-fixtures-bundle', 'https://github.com/doctrine/DoctrineFixturesBundle', 'composer require --dev doctrine/doctrine-fixtures-bundle']
@@ -63,7 +63,7 @@ class BundleController extends Controller
         return $this->render('bundle/bundle.html.twig', [
             'title' => 'menu_bundles',
             'bundles' => $bundles,
-            'useFull' => $useFull,
+            'useFul' => $useFul,
             'multilinguals' => $multilinguals
         ]);
     }
