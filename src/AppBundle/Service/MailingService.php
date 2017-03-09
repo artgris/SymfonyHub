@@ -32,7 +32,7 @@ class MailingService
             ->setSubject(self::PREFIX . 'subject')
             ->setFrom(self::SENDER, 'Sender')
             ->setTo(self::DESTINATION)
-            ->setBody($text = Html2Text::convert($template), 'text/plan')
+            ->setBody($text = Html2Text::convert($template), 'text/plain')
             ->addPart($template, 'text/html');
         $this->mailer->send($message);
     }
