@@ -4,8 +4,6 @@ Testing Symfony Bundles and Components | Adding Services and Twig demos
 Bundles list
 ------------
 
-http://symfonyhub.artgris.me/bundle/ :
-
         "arkounay/image-bundle": "^2.0",
         "arkounay/block-bundle": "^1.2",
         "knplabs/knp-paginator-bundle": "^2.5",
