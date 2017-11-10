@@ -36,6 +36,7 @@ Requirements
         sudo service apache2 restart
   
   * wkhtmltopdf and wkhtmltoimage
+  
         wget https://downloads.wkhtmltopdf.org/0.12/0.12.4/**
         tar -xvf wkhtmltox-0.12.4_linux-generic-**       
         ln wkhtmltox/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
